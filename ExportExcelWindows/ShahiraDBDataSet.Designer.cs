@@ -20,17 +20,17 @@ namespace ExportExcelWindows {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("myfavouritemotorsDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("ShahiraDBDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class myfavouritemotorsDataSet : global::System.Data.DataSet {
+    public partial class ShahiraDBDataSet : global::System.Data.DataSet {
         
-        private tbl_Buyer_AuctionDataTable tabletbl_Buyer_Auction;
+        private Product_CategoryDataTable tableProduct_Category;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public myfavouritemotorsDataSet() {
+        public ShahiraDBDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace ExportExcelWindows {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected myfavouritemotorsDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected ShahiraDBDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace ExportExcelWindows {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["tbl_Buyer_Auction"] != null)) {
-                    base.Tables.Add(new tbl_Buyer_AuctionDataTable(ds.Tables["tbl_Buyer_Auction"]));
+                if ((ds.Tables["Product_Category"] != null)) {
+                    base.Tables.Add(new Product_CategoryDataTable(ds.Tables["Product_Category"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace ExportExcelWindows {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public tbl_Buyer_AuctionDataTable tbl_Buyer_Auction {
+        public Product_CategoryDataTable Product_Category {
             get {
-                return this.tabletbl_Buyer_Auction;
+                return this.tableProduct_Category;
             }
         }
         
@@ -127,7 +127,7 @@ namespace ExportExcelWindows {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            myfavouritemotorsDataSet cln = ((myfavouritemotorsDataSet)(base.Clone()));
+            ShahiraDBDataSet cln = ((ShahiraDBDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace ExportExcelWindows {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["tbl_Buyer_Auction"] != null)) {
-                    base.Tables.Add(new tbl_Buyer_AuctionDataTable(ds.Tables["tbl_Buyer_Auction"]));
+                if ((ds.Tables["Product_Category"] != null)) {
+                    base.Tables.Add(new Product_CategoryDataTable(ds.Tables["Product_Category"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace ExportExcelWindows {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tabletbl_Buyer_Auction = ((tbl_Buyer_AuctionDataTable)(base.Tables["tbl_Buyer_Auction"]));
+            this.tableProduct_Category = ((Product_CategoryDataTable)(base.Tables["Product_Category"]));
             if ((initTable == true)) {
-                if ((this.tabletbl_Buyer_Auction != null)) {
-                    this.tabletbl_Buyer_Auction.InitVars();
+                if ((this.tableProduct_Category != null)) {
+                    this.tableProduct_Category.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace ExportExcelWindows {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "myfavouritemotorsDataSet";
+            this.DataSetName = "ShahiraDBDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/myfavouritemotorsDataSet.xsd";
+            this.Namespace = "http://tempuri.org/ShahiraDBDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tabletbl_Buyer_Auction = new tbl_Buyer_AuctionDataTable();
-            base.Tables.Add(this.tabletbl_Buyer_Auction);
+            this.tableProduct_Category = new Product_CategoryDataTable();
+            base.Tables.Add(this.tableProduct_Category);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializetbl_Buyer_Auction() {
+        private bool ShouldSerializeProduct_Category() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace ExportExcelWindows {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            myfavouritemotorsDataSet ds = new myfavouritemotorsDataSet();
+            ShahiraDBDataSet ds = new ShahiraDBDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,29 +270,49 @@ namespace ExportExcelWindows {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void tbl_Buyer_AuctionRowChangeEventHandler(object sender, tbl_Buyer_AuctionRowChangeEvent e);
+        public delegate void Product_CategoryRowChangeEventHandler(object sender, Product_CategoryRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class tbl_Buyer_AuctionDataTable : global::System.Data.TypedTableBase<tbl_Buyer_AuctionRow> {
+        public partial class Product_CategoryDataTable : global::System.Data.TypedTableBase<Product_CategoryRow> {
             
-            private global::System.Data.DataColumn columnId;
+            private global::System.Data.DataColumn columnid;
             
-            private global::System.Data.DataColumn columnUserid;
+            private global::System.Data.DataColumn columnparent_id;
             
-            private global::System.Data.DataColumn columnCode;
+            private global::System.Data.DataColumn columncategory_en;
             
-            private global::System.Data.DataColumn columnauction;
+            private global::System.Data.DataColumn columncategory_ar;
             
-            private global::System.Data.DataColumn columnAfter_Bid_Total;
+            private global::System.Data.DataColumn columndescription_en;
+            
+            private global::System.Data.DataColumn columndescription_ar;
+            
+            private global::System.Data.DataColumn columnlist_banner_img_en;
+            
+            private global::System.Data.DataColumn columnlist_banner_img_ar;
+            
+            private global::System.Data.DataColumn columnpage_banner_img_en;
+            
+            private global::System.Data.DataColumn columnpage_banner_img_ar;
+            
+            private global::System.Data.DataColumn columncategoryurl_en;
+            
+            private global::System.Data.DataColumn columncategoryurl_ar;
+            
+            private global::System.Data.DataColumn columnlogo_file;
+            
+            private global::System.Data.DataColumn columncategory_is_enable;
+            
+            private global::System.Data.DataColumn columnis_system;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tbl_Buyer_AuctionDataTable() {
-                this.TableName = "tbl_Buyer_Auction";
+            public Product_CategoryDataTable() {
+                this.TableName = "Product_Category";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -300,7 +320,7 @@ namespace ExportExcelWindows {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal tbl_Buyer_AuctionDataTable(global::System.Data.DataTable table) {
+            internal Product_CategoryDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -317,48 +337,128 @@ namespace ExportExcelWindows {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected tbl_Buyer_AuctionDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected Product_CategoryDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn IdColumn {
+            public global::System.Data.DataColumn idColumn {
                 get {
-                    return this.columnId;
+                    return this.columnid;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn UseridColumn {
+            public global::System.Data.DataColumn parent_idColumn {
                 get {
-                    return this.columnUserid;
+                    return this.columnparent_id;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn CodeColumn {
+            public global::System.Data.DataColumn category_enColumn {
                 get {
-                    return this.columnCode;
+                    return this.columncategory_en;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn auctionColumn {
+            public global::System.Data.DataColumn category_arColumn {
                 get {
-                    return this.columnauction;
+                    return this.columncategory_ar;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn After_Bid_TotalColumn {
+            public global::System.Data.DataColumn description_enColumn {
                 get {
-                    return this.columnAfter_Bid_Total;
+                    return this.columndescription_en;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn description_arColumn {
+                get {
+                    return this.columndescription_ar;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn list_banner_img_enColumn {
+                get {
+                    return this.columnlist_banner_img_en;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn list_banner_img_arColumn {
+                get {
+                    return this.columnlist_banner_img_ar;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn page_banner_img_enColumn {
+                get {
+                    return this.columnpage_banner_img_en;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn page_banner_img_arColumn {
+                get {
+                    return this.columnpage_banner_img_ar;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn categoryurl_enColumn {
+                get {
+                    return this.columncategoryurl_en;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn categoryurl_arColumn {
+                get {
+                    return this.columncategoryurl_ar;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn logo_fileColumn {
+                get {
+                    return this.columnlogo_file;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn category_is_enableColumn {
+                get {
+                    return this.columncategory_is_enable;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn is_systemColumn {
+                get {
+                    return this.columnis_system;
                 }
             }
             
@@ -373,56 +473,66 @@ namespace ExportExcelWindows {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tbl_Buyer_AuctionRow this[int index] {
+            public Product_CategoryRow this[int index] {
                 get {
-                    return ((tbl_Buyer_AuctionRow)(this.Rows[index]));
+                    return ((Product_CategoryRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event tbl_Buyer_AuctionRowChangeEventHandler tbl_Buyer_AuctionRowChanging;
+            public event Product_CategoryRowChangeEventHandler Product_CategoryRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event tbl_Buyer_AuctionRowChangeEventHandler tbl_Buyer_AuctionRowChanged;
+            public event Product_CategoryRowChangeEventHandler Product_CategoryRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event tbl_Buyer_AuctionRowChangeEventHandler tbl_Buyer_AuctionRowDeleting;
+            public event Product_CategoryRowChangeEventHandler Product_CategoryRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event tbl_Buyer_AuctionRowChangeEventHandler tbl_Buyer_AuctionRowDeleted;
+            public event Product_CategoryRowChangeEventHandler Product_CategoryRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Addtbl_Buyer_AuctionRow(tbl_Buyer_AuctionRow row) {
+            public void AddProduct_CategoryRow(Product_CategoryRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tbl_Buyer_AuctionRow Addtbl_Buyer_AuctionRow(string Id, string Userid, string Code, string auction, string After_Bid_Total) {
-                tbl_Buyer_AuctionRow rowtbl_Buyer_AuctionRow = ((tbl_Buyer_AuctionRow)(this.NewRow()));
+            public Product_CategoryRow AddProduct_CategoryRow(int id, int parent_id, string category_en, string category_ar, string description_en, string description_ar, string list_banner_img_en, string list_banner_img_ar, string page_banner_img_en, string page_banner_img_ar, string categoryurl_en, string categoryurl_ar, string logo_file, int category_is_enable, int is_system) {
+                Product_CategoryRow rowProduct_CategoryRow = ((Product_CategoryRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Id,
-                        Userid,
-                        Code,
-                        auction,
-                        After_Bid_Total};
-                rowtbl_Buyer_AuctionRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowtbl_Buyer_AuctionRow);
-                return rowtbl_Buyer_AuctionRow;
+                        id,
+                        parent_id,
+                        category_en,
+                        category_ar,
+                        description_en,
+                        description_ar,
+                        list_banner_img_en,
+                        list_banner_img_ar,
+                        page_banner_img_en,
+                        page_banner_img_ar,
+                        categoryurl_en,
+                        categoryurl_ar,
+                        logo_file,
+                        category_is_enable,
+                        is_system};
+                rowProduct_CategoryRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowProduct_CategoryRow);
+                return rowProduct_CategoryRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tbl_Buyer_AuctionRow FindById(string Id) {
-                return ((tbl_Buyer_AuctionRow)(this.Rows.Find(new object[] {
-                            Id})));
+            public Product_CategoryRow FindByid(int id) {
+                return ((Product_CategoryRow)(this.Rows.Find(new object[] {
+                            id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                tbl_Buyer_AuctionDataTable cln = ((tbl_Buyer_AuctionDataTable)(base.Clone()));
+                Product_CategoryDataTable cln = ((Product_CategoryDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -430,67 +540,117 @@ namespace ExportExcelWindows {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new tbl_Buyer_AuctionDataTable();
+                return new Product_CategoryDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnId = base.Columns["Id"];
-                this.columnUserid = base.Columns["Userid"];
-                this.columnCode = base.Columns["Code"];
-                this.columnauction = base.Columns["auction"];
-                this.columnAfter_Bid_Total = base.Columns["After_Bid_Total"];
+                this.columnid = base.Columns["id"];
+                this.columnparent_id = base.Columns["parent_id"];
+                this.columncategory_en = base.Columns["category_en"];
+                this.columncategory_ar = base.Columns["category_ar"];
+                this.columndescription_en = base.Columns["description_en"];
+                this.columndescription_ar = base.Columns["description_ar"];
+                this.columnlist_banner_img_en = base.Columns["list_banner_img_en"];
+                this.columnlist_banner_img_ar = base.Columns["list_banner_img_ar"];
+                this.columnpage_banner_img_en = base.Columns["page_banner_img_en"];
+                this.columnpage_banner_img_ar = base.Columns["page_banner_img_ar"];
+                this.columncategoryurl_en = base.Columns["categoryurl_en"];
+                this.columncategoryurl_ar = base.Columns["categoryurl_ar"];
+                this.columnlogo_file = base.Columns["logo_file"];
+                this.columncategory_is_enable = base.Columns["category_is_enable"];
+                this.columnis_system = base.Columns["is_system"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnId = new global::System.Data.DataColumn("Id", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnId);
-                this.columnUserid = new global::System.Data.DataColumn("Userid", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnUserid);
-                this.columnCode = new global::System.Data.DataColumn("Code", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCode);
-                this.columnauction = new global::System.Data.DataColumn("auction", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnauction);
-                this.columnAfter_Bid_Total = new global::System.Data.DataColumn("After_Bid_Total", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAfter_Bid_Total);
+                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid);
+                this.columnparent_id = new global::System.Data.DataColumn("parent_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnparent_id);
+                this.columncategory_en = new global::System.Data.DataColumn("category_en", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncategory_en);
+                this.columncategory_ar = new global::System.Data.DataColumn("category_ar", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncategory_ar);
+                this.columndescription_en = new global::System.Data.DataColumn("description_en", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndescription_en);
+                this.columndescription_ar = new global::System.Data.DataColumn("description_ar", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndescription_ar);
+                this.columnlist_banner_img_en = new global::System.Data.DataColumn("list_banner_img_en", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlist_banner_img_en);
+                this.columnlist_banner_img_ar = new global::System.Data.DataColumn("list_banner_img_ar", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlist_banner_img_ar);
+                this.columnpage_banner_img_en = new global::System.Data.DataColumn("page_banner_img_en", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpage_banner_img_en);
+                this.columnpage_banner_img_ar = new global::System.Data.DataColumn("page_banner_img_ar", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpage_banner_img_ar);
+                this.columncategoryurl_en = new global::System.Data.DataColumn("categoryurl_en", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncategoryurl_en);
+                this.columncategoryurl_ar = new global::System.Data.DataColumn("categoryurl_ar", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncategoryurl_ar);
+                this.columnlogo_file = new global::System.Data.DataColumn("logo_file", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlogo_file);
+                this.columncategory_is_enable = new global::System.Data.DataColumn("category_is_enable", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncategory_is_enable);
+                this.columnis_system = new global::System.Data.DataColumn("is_system", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnis_system);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnId}, true));
-                this.columnId.AllowDBNull = false;
-                this.columnId.Unique = true;
-                this.columnId.MaxLength = 50;
-                this.columnUserid.MaxLength = 50;
-                this.columnCode.MaxLength = 50;
-                this.columnauction.MaxLength = 50;
-                this.columnAfter_Bid_Total.MaxLength = 50;
+                                this.columnid}, true));
+                this.columnid.AllowDBNull = false;
+                this.columnid.Unique = true;
+                this.columnparent_id.AllowDBNull = false;
+                this.columncategory_en.AllowDBNull = false;
+                this.columncategory_en.MaxLength = 200;
+                this.columncategory_ar.AllowDBNull = false;
+                this.columncategory_ar.MaxLength = 200;
+                this.columndescription_en.AllowDBNull = false;
+                this.columndescription_en.MaxLength = 2147483647;
+                this.columndescription_ar.AllowDBNull = false;
+                this.columndescription_ar.MaxLength = 2147483647;
+                this.columnlist_banner_img_en.AllowDBNull = false;
+                this.columnlist_banner_img_en.MaxLength = 50;
+                this.columnlist_banner_img_ar.AllowDBNull = false;
+                this.columnlist_banner_img_ar.MaxLength = 50;
+                this.columnpage_banner_img_en.AllowDBNull = false;
+                this.columnpage_banner_img_en.MaxLength = 50;
+                this.columnpage_banner_img_ar.AllowDBNull = false;
+                this.columnpage_banner_img_ar.MaxLength = 50;
+                this.columncategoryurl_en.AllowDBNull = false;
+                this.columncategoryurl_en.MaxLength = 500;
+                this.columncategoryurl_ar.AllowDBNull = false;
+                this.columncategoryurl_ar.MaxLength = 500;
+                this.columnlogo_file.AllowDBNull = false;
+                this.columnlogo_file.MaxLength = 2147483647;
+                this.columncategory_is_enable.AllowDBNull = false;
+                this.columnis_system.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tbl_Buyer_AuctionRow Newtbl_Buyer_AuctionRow() {
-                return ((tbl_Buyer_AuctionRow)(this.NewRow()));
+            public Product_CategoryRow NewProduct_CategoryRow() {
+                return ((Product_CategoryRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new tbl_Buyer_AuctionRow(builder);
+                return new Product_CategoryRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(tbl_Buyer_AuctionRow);
+                return typeof(Product_CategoryRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.tbl_Buyer_AuctionRowChanged != null)) {
-                    this.tbl_Buyer_AuctionRowChanged(this, new tbl_Buyer_AuctionRowChangeEvent(((tbl_Buyer_AuctionRow)(e.Row)), e.Action));
+                if ((this.Product_CategoryRowChanged != null)) {
+                    this.Product_CategoryRowChanged(this, new Product_CategoryRowChangeEvent(((Product_CategoryRow)(e.Row)), e.Action));
                 }
             }
             
@@ -498,8 +658,8 @@ namespace ExportExcelWindows {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.tbl_Buyer_AuctionRowChanging != null)) {
-                    this.tbl_Buyer_AuctionRowChanging(this, new tbl_Buyer_AuctionRowChangeEvent(((tbl_Buyer_AuctionRow)(e.Row)), e.Action));
+                if ((this.Product_CategoryRowChanging != null)) {
+                    this.Product_CategoryRowChanging(this, new Product_CategoryRowChangeEvent(((Product_CategoryRow)(e.Row)), e.Action));
                 }
             }
             
@@ -507,8 +667,8 @@ namespace ExportExcelWindows {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.tbl_Buyer_AuctionRowDeleted != null)) {
-                    this.tbl_Buyer_AuctionRowDeleted(this, new tbl_Buyer_AuctionRowChangeEvent(((tbl_Buyer_AuctionRow)(e.Row)), e.Action));
+                if ((this.Product_CategoryRowDeleted != null)) {
+                    this.Product_CategoryRowDeleted(this, new Product_CategoryRowChangeEvent(((Product_CategoryRow)(e.Row)), e.Action));
                 }
             }
             
@@ -516,14 +676,14 @@ namespace ExportExcelWindows {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.tbl_Buyer_AuctionRowDeleting != null)) {
-                    this.tbl_Buyer_AuctionRowDeleting(this, new tbl_Buyer_AuctionRowChangeEvent(((tbl_Buyer_AuctionRow)(e.Row)), e.Action));
+                if ((this.Product_CategoryRowDeleting != null)) {
+                    this.Product_CategoryRowDeleting(this, new Product_CategoryRowChangeEvent(((Product_CategoryRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Removetbl_Buyer_AuctionRow(tbl_Buyer_AuctionRow row) {
+            public void RemoveProduct_CategoryRow(Product_CategoryRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -532,7 +692,7 @@ namespace ExportExcelWindows {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                myfavouritemotorsDataSet ds = new myfavouritemotorsDataSet();
+                ShahiraDBDataSet ds = new ShahiraDBDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -550,7 +710,7 @@ namespace ExportExcelWindows {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "tbl_Buyer_AuctionDataTable";
+                attribute2.FixedValue = "Product_CategoryDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -594,138 +754,180 @@ namespace ExportExcelWindows {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class tbl_Buyer_AuctionRow : global::System.Data.DataRow {
+        public partial class Product_CategoryRow : global::System.Data.DataRow {
             
-            private tbl_Buyer_AuctionDataTable tabletbl_Buyer_Auction;
+            private Product_CategoryDataTable tableProduct_Category;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal tbl_Buyer_AuctionRow(global::System.Data.DataRowBuilder rb) : 
+            internal Product_CategoryRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tabletbl_Buyer_Auction = ((tbl_Buyer_AuctionDataTable)(this.Table));
+                this.tableProduct_Category = ((Product_CategoryDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Id {
+            public int id {
                 get {
-                    return ((string)(this[this.tabletbl_Buyer_Auction.IdColumn]));
+                    return ((int)(this[this.tableProduct_Category.idColumn]));
                 }
                 set {
-                    this[this.tabletbl_Buyer_Auction.IdColumn] = value;
+                    this[this.tableProduct_Category.idColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Userid {
+            public int parent_id {
                 get {
-                    try {
-                        return ((string)(this[this.tabletbl_Buyer_Auction.UseridColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Userid\' in table \'tbl_Buyer_Auction\' is DBNull.", e);
-                    }
+                    return ((int)(this[this.tableProduct_Category.parent_idColumn]));
                 }
                 set {
-                    this[this.tabletbl_Buyer_Auction.UseridColumn] = value;
+                    this[this.tableProduct_Category.parent_idColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Code {
+            public string category_en {
                 get {
-                    try {
-                        return ((string)(this[this.tabletbl_Buyer_Auction.CodeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Code\' in table \'tbl_Buyer_Auction\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableProduct_Category.category_enColumn]));
                 }
                 set {
-                    this[this.tabletbl_Buyer_Auction.CodeColumn] = value;
+                    this[this.tableProduct_Category.category_enColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string auction {
+            public string category_ar {
                 get {
-                    try {
-                        return ((string)(this[this.tabletbl_Buyer_Auction.auctionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'auction\' in table \'tbl_Buyer_Auction\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableProduct_Category.category_arColumn]));
                 }
                 set {
-                    this[this.tabletbl_Buyer_Auction.auctionColumn] = value;
+                    this[this.tableProduct_Category.category_arColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string After_Bid_Total {
+            public string description_en {
                 get {
-                    try {
-                        return ((string)(this[this.tabletbl_Buyer_Auction.After_Bid_TotalColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'After_Bid_Total\' in table \'tbl_Buyer_Auction\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableProduct_Category.description_enColumn]));
                 }
                 set {
-                    this[this.tabletbl_Buyer_Auction.After_Bid_TotalColumn] = value;
+                    this[this.tableProduct_Category.description_enColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsUseridNull() {
-                return this.IsNull(this.tabletbl_Buyer_Auction.UseridColumn);
+            public string description_ar {
+                get {
+                    return ((string)(this[this.tableProduct_Category.description_arColumn]));
+                }
+                set {
+                    this[this.tableProduct_Category.description_arColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetUseridNull() {
-                this[this.tabletbl_Buyer_Auction.UseridColumn] = global::System.Convert.DBNull;
+            public string list_banner_img_en {
+                get {
+                    return ((string)(this[this.tableProduct_Category.list_banner_img_enColumn]));
+                }
+                set {
+                    this[this.tableProduct_Category.list_banner_img_enColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsCodeNull() {
-                return this.IsNull(this.tabletbl_Buyer_Auction.CodeColumn);
+            public string list_banner_img_ar {
+                get {
+                    return ((string)(this[this.tableProduct_Category.list_banner_img_arColumn]));
+                }
+                set {
+                    this[this.tableProduct_Category.list_banner_img_arColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetCodeNull() {
-                this[this.tabletbl_Buyer_Auction.CodeColumn] = global::System.Convert.DBNull;
+            public string page_banner_img_en {
+                get {
+                    return ((string)(this[this.tableProduct_Category.page_banner_img_enColumn]));
+                }
+                set {
+                    this[this.tableProduct_Category.page_banner_img_enColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsauctionNull() {
-                return this.IsNull(this.tabletbl_Buyer_Auction.auctionColumn);
+            public string page_banner_img_ar {
+                get {
+                    return ((string)(this[this.tableProduct_Category.page_banner_img_arColumn]));
+                }
+                set {
+                    this[this.tableProduct_Category.page_banner_img_arColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetauctionNull() {
-                this[this.tabletbl_Buyer_Auction.auctionColumn] = global::System.Convert.DBNull;
+            public string categoryurl_en {
+                get {
+                    return ((string)(this[this.tableProduct_Category.categoryurl_enColumn]));
+                }
+                set {
+                    this[this.tableProduct_Category.categoryurl_enColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsAfter_Bid_TotalNull() {
-                return this.IsNull(this.tabletbl_Buyer_Auction.After_Bid_TotalColumn);
+            public string categoryurl_ar {
+                get {
+                    return ((string)(this[this.tableProduct_Category.categoryurl_arColumn]));
+                }
+                set {
+                    this[this.tableProduct_Category.categoryurl_arColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetAfter_Bid_TotalNull() {
-                this[this.tabletbl_Buyer_Auction.After_Bid_TotalColumn] = global::System.Convert.DBNull;
+            public string logo_file {
+                get {
+                    return ((string)(this[this.tableProduct_Category.logo_fileColumn]));
+                }
+                set {
+                    this[this.tableProduct_Category.logo_fileColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int category_is_enable {
+                get {
+                    return ((int)(this[this.tableProduct_Category.category_is_enableColumn]));
+                }
+                set {
+                    this[this.tableProduct_Category.category_is_enableColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int is_system {
+                get {
+                    return ((int)(this[this.tableProduct_Category.is_systemColumn]));
+                }
+                set {
+                    this[this.tableProduct_Category.is_systemColumn] = value;
+                }
             }
         }
         
@@ -733,22 +935,22 @@ namespace ExportExcelWindows {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class tbl_Buyer_AuctionRowChangeEvent : global::System.EventArgs {
+        public class Product_CategoryRowChangeEvent : global::System.EventArgs {
             
-            private tbl_Buyer_AuctionRow eventRow;
+            private Product_CategoryRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tbl_Buyer_AuctionRowChangeEvent(tbl_Buyer_AuctionRow row, global::System.Data.DataRowAction action) {
+            public Product_CategoryRowChangeEvent(Product_CategoryRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tbl_Buyer_AuctionRow Row {
+            public Product_CategoryRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -764,7 +966,7 @@ namespace ExportExcelWindows {
         }
     }
 }
-namespace ExportExcelWindows.myfavouritemotorsDataSetTableAdapters {
+namespace ExportExcelWindows.ShahiraDBDataSetTableAdapters {
     
     
     /// <summary>
@@ -776,7 +978,7 @@ namespace ExportExcelWindows.myfavouritemotorsDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class tbl_Buyer_AuctionTableAdapter : global::System.ComponentModel.Component {
+    public partial class Product_CategoryTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -790,7 +992,7 @@ namespace ExportExcelWindows.myfavouritemotorsDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public tbl_Buyer_AuctionTableAdapter() {
+        public Product_CategoryTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -887,64 +1089,98 @@ namespace ExportExcelWindows.myfavouritemotorsDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "tbl_Buyer_Auction";
-            tableMapping.ColumnMappings.Add("Id", "Id");
-            tableMapping.ColumnMappings.Add("Userid", "Userid");
-            tableMapping.ColumnMappings.Add("Code", "Code");
-            tableMapping.ColumnMappings.Add("auction", "auction");
-            tableMapping.ColumnMappings.Add("After_Bid_Total", "After_Bid_Total");
+            tableMapping.DataSetTable = "Product_Category";
+            tableMapping.ColumnMappings.Add("id", "id");
+            tableMapping.ColumnMappings.Add("parent_id", "parent_id");
+            tableMapping.ColumnMappings.Add("category_en", "category_en");
+            tableMapping.ColumnMappings.Add("category_ar", "category_ar");
+            tableMapping.ColumnMappings.Add("description_en", "description_en");
+            tableMapping.ColumnMappings.Add("description_ar", "description_ar");
+            tableMapping.ColumnMappings.Add("list_banner_img_en", "list_banner_img_en");
+            tableMapping.ColumnMappings.Add("list_banner_img_ar", "list_banner_img_ar");
+            tableMapping.ColumnMappings.Add("page_banner_img_en", "page_banner_img_en");
+            tableMapping.ColumnMappings.Add("page_banner_img_ar", "page_banner_img_ar");
+            tableMapping.ColumnMappings.Add("categoryurl_en", "categoryurl_en");
+            tableMapping.ColumnMappings.Add("categoryurl_ar", "categoryurl_ar");
+            tableMapping.ColumnMappings.Add("logo_file", "logo_file");
+            tableMapping.ColumnMappings.Add("category_is_enable", "category_is_enable");
+            tableMapping.ColumnMappings.Add("is_system", "is_system");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[tbl_Buyer_Auction] WHERE (([Id] = @Original_Id) AND ((@IsNull_Userid = 1 AND [Userid] IS NULL) OR ([Userid] = @Original_Userid)) AND ((@IsNull_Code = 1 AND [Code] IS NULL) OR ([Code] = @Original_Code)) AND ((@IsNull_auction = 1 AND [auction] IS NULL) OR ([auction] = @Original_auction)) AND ((@IsNull_After_Bid_Total = 1 AND [After_Bid_Total] IS NULL) OR ([After_Bid_Total] = @Original_After_Bid_Total)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Product_Category] WHERE (([id] = @Original_id) AND ([parent_id] = @Original_parent_id) AND ([category_en] = @Original_category_en) AND ([category_ar] = @Original_category_ar) AND ([list_banner_img_en] = @Original_list_banner_img_en) AND ([list_banner_img_ar] = @Original_list_banner_img_ar) AND ([page_banner_img_en] = @Original_page_banner_img_en) AND ([page_banner_img_ar] = @Original_page_banner_img_ar) AND ([categoryurl_en] = @Original_categoryurl_en) AND ([categoryurl_ar] = @Original_categoryurl_ar) AND ([category_is_enable] = @Original_category_is_enable) AND ([is_system] = @Original_is_system))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Userid", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Userid", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Userid", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Userid", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Code", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Code", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Code", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Code", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_auction", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "auction", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_auction", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "auction", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_After_Bid_Total", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "After_Bid_Total", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_After_Bid_Total", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "After_Bid_Total", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_parent_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "parent_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_category_en", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "category_en", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_category_ar", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "category_ar", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_list_banner_img_en", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "list_banner_img_en", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_list_banner_img_ar", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "list_banner_img_ar", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_page_banner_img_en", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "page_banner_img_en", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_page_banner_img_ar", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "page_banner_img_ar", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_categoryurl_en", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "categoryurl_en", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_categoryurl_ar", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "categoryurl_ar", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_category_is_enable", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "category_is_enable", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_is_system", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_system", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tbl_Buyer_Auction] ([Id], [Userid], [Code], [auction], [After_" +
-                "Bid_Total]) VALUES (@Id, @Userid, @Code, @auction, @After_Bid_Total);\r\nSELECT Id" +
-                ", Userid, Code, auction, After_Bid_Total FROM tbl_Buyer_Auction WHERE (Id = @Id)" +
-                "";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Product_Category] ([id], [parent_id], [category_en], [category_ar], [description_en], [description_ar], [list_banner_img_en], [list_banner_img_ar], [page_banner_img_en], [page_banner_img_ar], [categoryurl_en], [categoryurl_ar], [logo_file], [category_is_enable], [is_system]) VALUES (@id, @parent_id, @category_en, @category_ar, @description_en, @description_ar, @list_banner_img_en, @list_banner_img_ar, @page_banner_img_en, @page_banner_img_ar, @categoryurl_en, @categoryurl_ar, @logo_file, @category_is_enable, @is_system);
+SELECT id, parent_id, category_en, category_ar, description_en, description_ar, list_banner_img_en, list_banner_img_ar, page_banner_img_en, page_banner_img_ar, categoryurl_en, categoryurl_ar, logo_file, category_is_enable, is_system FROM Product_Category WHERE (id = @id)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Userid", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Userid", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Code", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@auction", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "auction", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@After_Bid_Total", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "After_Bid_Total", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@parent_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "parent_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@category_en", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "category_en", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@category_ar", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "category_ar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@description_en", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "description_en", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@description_ar", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "description_ar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@list_banner_img_en", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "list_banner_img_en", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@list_banner_img_ar", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "list_banner_img_ar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@page_banner_img_en", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "page_banner_img_en", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@page_banner_img_ar", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "page_banner_img_ar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@categoryurl_en", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "categoryurl_en", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@categoryurl_ar", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "categoryurl_ar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@logo_file", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "logo_file", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@category_is_enable", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "category_is_enable", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@is_system", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_system", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tbl_Buyer_Auction] SET [Id] = @Id, [Userid] = @Userid, [Code] = @Code, [auction] = @auction, [After_Bid_Total] = @After_Bid_Total WHERE (([Id] = @Original_Id) AND ((@IsNull_Userid = 1 AND [Userid] IS NULL) OR ([Userid] = @Original_Userid)) AND ((@IsNull_Code = 1 AND [Code] IS NULL) OR ([Code] = @Original_Code)) AND ((@IsNull_auction = 1 AND [auction] IS NULL) OR ([auction] = @Original_auction)) AND ((@IsNull_After_Bid_Total = 1 AND [After_Bid_Total] IS NULL) OR ([After_Bid_Total] = @Original_After_Bid_Total)));
-SELECT Id, Userid, Code, auction, After_Bid_Total FROM tbl_Buyer_Auction WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Product_Category] SET [id] = @id, [parent_id] = @parent_id, [category_en] = @category_en, [category_ar] = @category_ar, [description_en] = @description_en, [description_ar] = @description_ar, [list_banner_img_en] = @list_banner_img_en, [list_banner_img_ar] = @list_banner_img_ar, [page_banner_img_en] = @page_banner_img_en, [page_banner_img_ar] = @page_banner_img_ar, [categoryurl_en] = @categoryurl_en, [categoryurl_ar] = @categoryurl_ar, [logo_file] = @logo_file, [category_is_enable] = @category_is_enable, [is_system] = @is_system WHERE (([id] = @Original_id) AND ([parent_id] = @Original_parent_id) AND ([category_en] = @Original_category_en) AND ([category_ar] = @Original_category_ar) AND ([list_banner_img_en] = @Original_list_banner_img_en) AND ([list_banner_img_ar] = @Original_list_banner_img_ar) AND ([page_banner_img_en] = @Original_page_banner_img_en) AND ([page_banner_img_ar] = @Original_page_banner_img_ar) AND ([categoryurl_en] = @Original_categoryurl_en) AND ([categoryurl_ar] = @Original_categoryurl_ar) AND ([category_is_enable] = @Original_category_is_enable) AND ([is_system] = @Original_is_system));
+SELECT id, parent_id, category_en, category_ar, description_en, description_ar, list_banner_img_en, list_banner_img_ar, page_banner_img_en, page_banner_img_ar, categoryurl_en, categoryurl_ar, logo_file, category_is_enable, is_system FROM Product_Category WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Userid", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Userid", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Code", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@auction", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "auction", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@After_Bid_Total", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "After_Bid_Total", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Userid", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Userid", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Userid", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Userid", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Code", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Code", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Code", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Code", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_auction", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "auction", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_auction", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "auction", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_After_Bid_Total", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "After_Bid_Total", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_After_Bid_Total", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "After_Bid_Total", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@parent_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "parent_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@category_en", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "category_en", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@category_ar", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "category_ar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@description_en", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "description_en", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@description_ar", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "description_ar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@list_banner_img_en", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "list_banner_img_en", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@list_banner_img_ar", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "list_banner_img_ar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@page_banner_img_en", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "page_banner_img_en", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@page_banner_img_ar", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "page_banner_img_ar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@categoryurl_en", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "categoryurl_en", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@categoryurl_ar", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "categoryurl_ar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@logo_file", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "logo_file", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@category_is_enable", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "category_is_enable", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@is_system", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_system", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_parent_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "parent_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_category_en", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "category_en", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_category_ar", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "category_ar", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_list_banner_img_en", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "list_banner_img_en", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_list_banner_img_ar", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "list_banner_img_ar", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_page_banner_img_en", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "page_banner_img_en", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_page_banner_img_ar", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "page_banner_img_ar", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_categoryurl_en", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "categoryurl_en", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_categoryurl_ar", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "categoryurl_ar", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_category_is_enable", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "category_is_enable", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_is_system", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_system", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ExportExcelWindows.Properties.Settings.Default.myfavouritemotorsConnectionString;
+            this._connection.ConnectionString = global::ExportExcelWindows.Properties.Settings.Default.ShahiraDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -953,7 +1189,7 @@ SELECT Id, Userid, Code, auction, After_Bid_Total FROM tbl_Buyer_Auction WHERE (
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, Userid, Code, auction, After_Bid_Total FROM dbo.tbl_Buyer_Auction";
+            this._commandCollection[0].CommandText = @"SELECT id, parent_id, category_en, category_ar, description_en, description_ar, list_banner_img_en, list_banner_img_ar, page_banner_img_en, page_banner_img_ar, categoryurl_en, categoryurl_ar, logo_file, category_is_enable, is_system FROM dbo.Product_Category";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -961,7 +1197,7 @@ SELECT Id, Userid, Code, auction, After_Bid_Total FROM tbl_Buyer_Auction WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(myfavouritemotorsDataSet.tbl_Buyer_AuctionDataTable dataTable) {
+        public virtual int Fill(ShahiraDBDataSet.Product_CategoryDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -974,9 +1210,9 @@ SELECT Id, Userid, Code, auction, After_Bid_Total FROM tbl_Buyer_Auction WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual myfavouritemotorsDataSet.tbl_Buyer_AuctionDataTable GetData() {
+        public virtual ShahiraDBDataSet.Product_CategoryDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            myfavouritemotorsDataSet.tbl_Buyer_AuctionDataTable dataTable = new myfavouritemotorsDataSet.tbl_Buyer_AuctionDataTable();
+            ShahiraDBDataSet.Product_CategoryDataTable dataTable = new ShahiraDBDataSet.Product_CategoryDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -984,15 +1220,15 @@ SELECT Id, Userid, Code, auction, After_Bid_Total FROM tbl_Buyer_Auction WHERE (
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(myfavouritemotorsDataSet.tbl_Buyer_AuctionDataTable dataTable) {
+        public virtual int Update(ShahiraDBDataSet.Product_CategoryDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(myfavouritemotorsDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "tbl_Buyer_Auction");
+        public virtual int Update(ShahiraDBDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "Product_Category");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1014,45 +1250,59 @@ SELECT Id, Userid, Code, auction, After_Bid_Total FROM tbl_Buyer_Auction WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_Id, string Original_Userid, string Original_Code, string Original_auction, string Original_After_Bid_Total) {
-            if ((Original_Id == null)) {
-                throw new global::System.ArgumentNullException("Original_Id");
+        public virtual int Delete(int Original_id, int Original_parent_id, string Original_category_en, string Original_category_ar, string Original_list_banner_img_en, string Original_list_banner_img_ar, string Original_page_banner_img_en, string Original_page_banner_img_ar, string Original_categoryurl_en, string Original_categoryurl_ar, int Original_category_is_enable, int Original_is_system) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_parent_id));
+            if ((Original_category_en == null)) {
+                throw new global::System.ArgumentNullException("Original_category_en");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_Id));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_category_en));
             }
-            if ((Original_Userid == null)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Userid));
-            }
-            if ((Original_Code == null)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            if ((Original_category_ar == null)) {
+                throw new global::System.ArgumentNullException("Original_category_ar");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Code));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_category_ar));
             }
-            if ((Original_auction == null)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            if ((Original_list_banner_img_en == null)) {
+                throw new global::System.ArgumentNullException("Original_list_banner_img_en");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_auction));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_list_banner_img_en));
             }
-            if ((Original_After_Bid_Total == null)) {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            if ((Original_list_banner_img_ar == null)) {
+                throw new global::System.ArgumentNullException("Original_list_banner_img_ar");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_After_Bid_Total));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_list_banner_img_ar));
             }
+            if ((Original_page_banner_img_en == null)) {
+                throw new global::System.ArgumentNullException("Original_page_banner_img_en");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_page_banner_img_en));
+            }
+            if ((Original_page_banner_img_ar == null)) {
+                throw new global::System.ArgumentNullException("Original_page_banner_img_ar");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_page_banner_img_ar));
+            }
+            if ((Original_categoryurl_en == null)) {
+                throw new global::System.ArgumentNullException("Original_categoryurl_en");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_categoryurl_en));
+            }
+            if ((Original_categoryurl_ar == null)) {
+                throw new global::System.ArgumentNullException("Original_categoryurl_ar");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((string)(Original_categoryurl_ar));
+            }
+            this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_category_is_enable));
+            this.Adapter.DeleteCommand.Parameters[11].Value = ((int)(Original_is_system));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1073,37 +1323,77 @@ SELECT Id, Userid, Code, auction, After_Bid_Total FROM tbl_Buyer_Auction WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Id, string Userid, string Code, string auction, string After_Bid_Total) {
-            if ((Id == null)) {
-                throw new global::System.ArgumentNullException("Id");
+        public virtual int Insert(int id, int parent_id, string category_en, string category_ar, string description_en, string description_ar, string list_banner_img_en, string list_banner_img_ar, string page_banner_img_en, string page_banner_img_ar, string categoryurl_en, string categoryurl_ar, string logo_file, int category_is_enable, int is_system) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(parent_id));
+            if ((category_en == null)) {
+                throw new global::System.ArgumentNullException("category_en");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Id));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(category_en));
             }
-            if ((Userid == null)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Userid));
-            }
-            if ((Code == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            if ((category_ar == null)) {
+                throw new global::System.ArgumentNullException("category_ar");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Code));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(category_ar));
             }
-            if ((auction == null)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(auction));
-            }
-            if ((After_Bid_Total == null)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            if ((description_en == null)) {
+                throw new global::System.ArgumentNullException("description_en");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(After_Bid_Total));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(description_en));
             }
+            if ((description_ar == null)) {
+                throw new global::System.ArgumentNullException("description_ar");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(description_ar));
+            }
+            if ((list_banner_img_en == null)) {
+                throw new global::System.ArgumentNullException("list_banner_img_en");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(list_banner_img_en));
+            }
+            if ((list_banner_img_ar == null)) {
+                throw new global::System.ArgumentNullException("list_banner_img_ar");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(list_banner_img_ar));
+            }
+            if ((page_banner_img_en == null)) {
+                throw new global::System.ArgumentNullException("page_banner_img_en");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(page_banner_img_en));
+            }
+            if ((page_banner_img_ar == null)) {
+                throw new global::System.ArgumentNullException("page_banner_img_ar");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(page_banner_img_ar));
+            }
+            if ((categoryurl_en == null)) {
+                throw new global::System.ArgumentNullException("categoryurl_en");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(categoryurl_en));
+            }
+            if ((categoryurl_ar == null)) {
+                throw new global::System.ArgumentNullException("categoryurl_ar");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(categoryurl_ar));
+            }
+            if ((logo_file == null)) {
+                throw new global::System.ArgumentNullException("logo_file");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(logo_file));
+            }
+            this.Adapter.InsertCommand.Parameters[13].Value = ((int)(category_is_enable));
+            this.Adapter.InsertCommand.Parameters[14].Value = ((int)(is_system));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1124,75 +1414,156 @@ SELECT Id, Userid, Code, auction, After_Bid_Total FROM tbl_Buyer_Auction WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Id, string Userid, string Code, string auction, string After_Bid_Total, string Original_Id, string Original_Userid, string Original_Code, string Original_auction, string Original_After_Bid_Total) {
-            if ((Id == null)) {
-                throw new global::System.ArgumentNullException("Id");
+        public virtual int Update(
+                    int id, 
+                    int parent_id, 
+                    string category_en, 
+                    string category_ar, 
+                    string description_en, 
+                    string description_ar, 
+                    string list_banner_img_en, 
+                    string list_banner_img_ar, 
+                    string page_banner_img_en, 
+                    string page_banner_img_ar, 
+                    string categoryurl_en, 
+                    string categoryurl_ar, 
+                    string logo_file, 
+                    int category_is_enable, 
+                    int is_system, 
+                    int Original_id, 
+                    int Original_parent_id, 
+                    string Original_category_en, 
+                    string Original_category_ar, 
+                    string Original_list_banner_img_en, 
+                    string Original_list_banner_img_ar, 
+                    string Original_page_banner_img_en, 
+                    string Original_page_banner_img_ar, 
+                    string Original_categoryurl_en, 
+                    string Original_categoryurl_ar, 
+                    int Original_category_is_enable, 
+                    int Original_is_system) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(id));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(parent_id));
+            if ((category_en == null)) {
+                throw new global::System.ArgumentNullException("category_en");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Id));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(category_en));
             }
-            if ((Userid == null)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Userid));
-            }
-            if ((Code == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            if ((category_ar == null)) {
+                throw new global::System.ArgumentNullException("category_ar");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Code));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(category_ar));
             }
-            if ((auction == null)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(auction));
-            }
-            if ((After_Bid_Total == null)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            if ((description_en == null)) {
+                throw new global::System.ArgumentNullException("description_en");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(After_Bid_Total));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(description_en));
             }
-            if ((Original_Id == null)) {
-                throw new global::System.ArgumentNullException("Original_Id");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_Id));
-            }
-            if ((Original_Userid == null)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            if ((description_ar == null)) {
+                throw new global::System.ArgumentNullException("description_ar");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_Userid));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(description_ar));
             }
-            if ((Original_Code == null)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            if ((list_banner_img_en == null)) {
+                throw new global::System.ArgumentNullException("list_banner_img_en");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_Code));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(list_banner_img_en));
             }
-            if ((Original_auction == null)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            if ((list_banner_img_ar == null)) {
+                throw new global::System.ArgumentNullException("list_banner_img_ar");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_auction));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(list_banner_img_ar));
             }
-            if ((Original_After_Bid_Total == null)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            if ((page_banner_img_en == null)) {
+                throw new global::System.ArgumentNullException("page_banner_img_en");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_After_Bid_Total));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(page_banner_img_en));
             }
+            if ((page_banner_img_ar == null)) {
+                throw new global::System.ArgumentNullException("page_banner_img_ar");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(page_banner_img_ar));
+            }
+            if ((categoryurl_en == null)) {
+                throw new global::System.ArgumentNullException("categoryurl_en");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(categoryurl_en));
+            }
+            if ((categoryurl_ar == null)) {
+                throw new global::System.ArgumentNullException("categoryurl_ar");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(categoryurl_ar));
+            }
+            if ((logo_file == null)) {
+                throw new global::System.ArgumentNullException("logo_file");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(logo_file));
+            }
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(category_is_enable));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(is_system));
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_id));
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_parent_id));
+            if ((Original_category_en == null)) {
+                throw new global::System.ArgumentNullException("Original_category_en");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_category_en));
+            }
+            if ((Original_category_ar == null)) {
+                throw new global::System.ArgumentNullException("Original_category_ar");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_category_ar));
+            }
+            if ((Original_list_banner_img_en == null)) {
+                throw new global::System.ArgumentNullException("Original_list_banner_img_en");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_list_banner_img_en));
+            }
+            if ((Original_list_banner_img_ar == null)) {
+                throw new global::System.ArgumentNullException("Original_list_banner_img_ar");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_list_banner_img_ar));
+            }
+            if ((Original_page_banner_img_en == null)) {
+                throw new global::System.ArgumentNullException("Original_page_banner_img_en");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_page_banner_img_en));
+            }
+            if ((Original_page_banner_img_ar == null)) {
+                throw new global::System.ArgumentNullException("Original_page_banner_img_ar");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_page_banner_img_ar));
+            }
+            if ((Original_categoryurl_en == null)) {
+                throw new global::System.ArgumentNullException("Original_categoryurl_en");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_categoryurl_en));
+            }
+            if ((Original_categoryurl_ar == null)) {
+                throw new global::System.ArgumentNullException("Original_categoryurl_ar");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_categoryurl_ar));
+            }
+            this.Adapter.UpdateCommand.Parameters[25].Value = ((int)(Original_category_is_enable));
+            this.Adapter.UpdateCommand.Parameters[26].Value = ((int)(Original_is_system));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1213,8 +1584,34 @@ SELECT Id, Userid, Code, auction, After_Bid_Total FROM tbl_Buyer_Auction WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Userid, string Code, string auction, string After_Bid_Total, string Original_Id, string Original_Userid, string Original_Code, string Original_auction, string Original_After_Bid_Total) {
-            return this.Update(Original_Id, Userid, Code, auction, After_Bid_Total, Original_Id, Original_Userid, Original_Code, Original_auction, Original_After_Bid_Total);
+        public virtual int Update(
+                    int parent_id, 
+                    string category_en, 
+                    string category_ar, 
+                    string description_en, 
+                    string description_ar, 
+                    string list_banner_img_en, 
+                    string list_banner_img_ar, 
+                    string page_banner_img_en, 
+                    string page_banner_img_ar, 
+                    string categoryurl_en, 
+                    string categoryurl_ar, 
+                    string logo_file, 
+                    int category_is_enable, 
+                    int is_system, 
+                    int Original_id, 
+                    int Original_parent_id, 
+                    string Original_category_en, 
+                    string Original_category_ar, 
+                    string Original_list_banner_img_en, 
+                    string Original_list_banner_img_ar, 
+                    string Original_page_banner_img_en, 
+                    string Original_page_banner_img_ar, 
+                    string Original_categoryurl_en, 
+                    string Original_categoryurl_ar, 
+                    int Original_category_is_enable, 
+                    int Original_is_system) {
+            return this.Update(Original_id, parent_id, category_en, category_ar, description_en, description_ar, list_banner_img_en, list_banner_img_ar, page_banner_img_en, page_banner_img_ar, categoryurl_en, categoryurl_ar, logo_file, category_is_enable, is_system, Original_id, Original_parent_id, Original_category_en, Original_category_ar, Original_list_banner_img_en, Original_list_banner_img_ar, Original_page_banner_img_en, Original_page_banner_img_ar, Original_categoryurl_en, Original_categoryurl_ar, Original_category_is_enable, Original_is_system);
         }
     }
     
@@ -1230,7 +1627,7 @@ SELECT Id, Userid, Code, auction, After_Bid_Total FROM tbl_Buyer_Auction WHERE (
         
         private UpdateOrderOption _updateOrder;
         
-        private tbl_Buyer_AuctionTableAdapter _tbl_Buyer_AuctionTableAdapter;
+        private Product_CategoryTableAdapter _product_CategoryTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1252,12 +1649,12 @@ SELECT Id, Userid, Code, auction, After_Bid_Total FROM tbl_Buyer_Auction WHERE (
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public tbl_Buyer_AuctionTableAdapter tbl_Buyer_AuctionTableAdapter {
+        public Product_CategoryTableAdapter Product_CategoryTableAdapter {
             get {
-                return this._tbl_Buyer_AuctionTableAdapter;
+                return this._product_CategoryTableAdapter;
             }
             set {
-                this._tbl_Buyer_AuctionTableAdapter = value;
+                this._product_CategoryTableAdapter = value;
             }
         }
         
@@ -1280,9 +1677,9 @@ SELECT Id, Userid, Code, auction, After_Bid_Total FROM tbl_Buyer_Auction WHERE (
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._tbl_Buyer_AuctionTableAdapter != null) 
-                            && (this._tbl_Buyer_AuctionTableAdapter.Connection != null))) {
-                    return this._tbl_Buyer_AuctionTableAdapter.Connection;
+                if (((this._product_CategoryTableAdapter != null) 
+                            && (this._product_CategoryTableAdapter.Connection != null))) {
+                    return this._product_CategoryTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1297,7 +1694,7 @@ SELECT Id, Userid, Code, auction, After_Bid_Total FROM tbl_Buyer_Auction WHERE (
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._tbl_Buyer_AuctionTableAdapter != null)) {
+                if ((this._product_CategoryTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1309,14 +1706,14 @@ SELECT Id, Userid, Code, auction, After_Bid_Total FROM tbl_Buyer_Auction WHERE (
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(myfavouritemotorsDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(ShahiraDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._tbl_Buyer_AuctionTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tbl_Buyer_Auction.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._product_CategoryTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Product_Category.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._tbl_Buyer_AuctionTableAdapter.Update(updatedRows));
+                    result = (result + this._product_CategoryTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1328,13 +1725,13 @@ SELECT Id, Userid, Code, auction, After_Bid_Total FROM tbl_Buyer_Auction WHERE (
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(myfavouritemotorsDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(ShahiraDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._tbl_Buyer_AuctionTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tbl_Buyer_Auction.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._product_CategoryTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Product_Category.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._tbl_Buyer_AuctionTableAdapter.Update(addedRows));
+                    result = (result + this._product_CategoryTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1346,13 +1743,13 @@ SELECT Id, Userid, Code, auction, After_Bid_Total FROM tbl_Buyer_Auction WHERE (
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(myfavouritemotorsDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(ShahiraDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._tbl_Buyer_AuctionTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tbl_Buyer_Auction.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._product_CategoryTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Product_Category.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tbl_Buyer_AuctionTableAdapter.Update(deletedRows));
+                    result = (result + this._product_CategoryTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1388,15 +1785,15 @@ SELECT Id, Userid, Code, auction, After_Bid_Total FROM tbl_Buyer_Auction WHERE (
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(myfavouritemotorsDataSet dataSet) {
+        public virtual int UpdateAll(ShahiraDBDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._tbl_Buyer_AuctionTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._tbl_Buyer_AuctionTableAdapter.Connection) == false))) {
+            if (((this._product_CategoryTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._product_CategoryTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1432,13 +1829,13 @@ SELECT Id, Userid, Code, auction, After_Bid_Total FROM tbl_Buyer_Auction WHERE (
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._tbl_Buyer_AuctionTableAdapter != null)) {
-                    revertConnections.Add(this._tbl_Buyer_AuctionTableAdapter, this._tbl_Buyer_AuctionTableAdapter.Connection);
-                    this._tbl_Buyer_AuctionTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._tbl_Buyer_AuctionTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._tbl_Buyer_AuctionTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._tbl_Buyer_AuctionTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._tbl_Buyer_AuctionTableAdapter.Adapter);
+                if ((this._product_CategoryTableAdapter != null)) {
+                    revertConnections.Add(this._product_CategoryTableAdapter, this._product_CategoryTableAdapter.Connection);
+                    this._product_CategoryTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._product_CategoryTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._product_CategoryTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._product_CategoryTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._product_CategoryTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1499,9 +1896,9 @@ SELECT Id, Userid, Code, auction, After_Bid_Total FROM tbl_Buyer_Auction WHERE (
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._tbl_Buyer_AuctionTableAdapter != null)) {
-                    this._tbl_Buyer_AuctionTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tbl_Buyer_AuctionTableAdapter]));
-                    this._tbl_Buyer_AuctionTableAdapter.Transaction = null;
+                if ((this._product_CategoryTableAdapter != null)) {
+                    this._product_CategoryTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._product_CategoryTableAdapter]));
+                    this._product_CategoryTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

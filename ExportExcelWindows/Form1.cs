@@ -23,11 +23,6 @@ namespace ExportExcelWindows
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'myfavouritemotorsDataSet.tbl_Buyer_Auction' table. You can move, or remove it, as needed.
-            this.tbl_Buyer_AuctionTableAdapter.Fill(this.myfavouritemotorsDataSet.tbl_Buyer_Auction);
-        }
 
         private void btnExport_Click(object sender, EventArgs e)
         {
@@ -39,7 +34,7 @@ namespace ExportExcelWindows
                     {
                         using (XLWorkbook workbook = new XLWorkbook())
                         {
-                            workbook.Worksheets.Add(dt.Copy(), "BuyerAuction");
+                            workbook.Worksheets.Add(dt, "Product_Categories");
                             workbook.SaveAs(saveFileDialog.FileName);
                         }
                         MessageBox.Show("", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -56,7 +51,7 @@ namespace ExportExcelWindows
         private void btnConvert_Click(object sender, EventArgs e)
         {
             //Creating DataTable.
-            DataTable dt = new DataTable();
+            dt = new DataTable();
 
             //Adding the Columns.
             foreach (DataGridViewColumn column in dgvExcelExport.Columns)
@@ -70,17 +65,26 @@ namespace ExportExcelWindows
                 dt.Rows.Add();
                 foreach (DataGridViewCell cell in row.Cells)
                 {
-                    if (cell.Value != DBNull.Value)
+                    if (cell.Value != null)
                     {
-                        dt.Rows[dt.Rows.Count - 1][cell.ColumnIndex] = cell.Value.ToString();
+                        if (cell.Value != DBNull.Value)
+                        {
+                            dt.Rows[dt.Rows.Count - 1][cell.ColumnIndex] = cell.Value.ToString();
+                        }
+                        else
+                        {
+                            dt.Rows[dt.Rows.Count - 1][cell.ColumnIndex] = string.Empty;
+                        }
                     }
-                    else
-                    {
-                        dt.Rows[dt.Rows.Count - 1][cell.ColumnIndex] = string.Empty;
-                    }
-                    
                 }
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'shahiraDBDataSet.Product_Category' table. You can move, or remove it, as needed.
+            this.product_CategoryTableAdapter.Fill(this.shahiraDBDataSet.Product_Category);
+
         }
     }
 }

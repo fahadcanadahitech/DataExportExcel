@@ -29,30 +29,31 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.tblBuyerAuctionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.myfavouritemotorsDataSet = new ExportExcelWindows.myfavouritemotorsDataSet();
-            this.tbl_Buyer_AuctionTableAdapter = new ExportExcelWindows.myfavouritemotorsDataSetTableAdapters.tbl_Buyer_AuctionTableAdapter();
             this.btnExport = new System.Windows.Forms.Button();
             this.btnConvert = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.tblBuyerAuctionBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myfavouritemotorsDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvExcelExport = new System.Windows.Forms.DataGridView();
+            this.shahiraDBDataSet = new ExportExcelWindows.ShahiraDBDataSet();
+            this.productCategoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.product_CategoryTableAdapter = new ExportExcelWindows.ShahiraDBDataSetTableAdapters.Product_CategoryTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parentidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.listbannerimgenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.listbannerimgarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pagebannerimgenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pagebannerimgarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryurlenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryurlarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.logofileDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryisenableDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.issystemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExcelExport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shahiraDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productCategoryBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // tblBuyerAuctionBindingSource
-            // 
-            this.tblBuyerAuctionBindingSource.DataMember = "tbl_Buyer_Auction";
-            this.tblBuyerAuctionBindingSource.DataSource = this.myfavouritemotorsDataSet;
-            // 
-            // myfavouritemotorsDataSet
-            // 
-            this.myfavouritemotorsDataSet.DataSetName = "myfavouritemotorsDataSet";
-            this.myfavouritemotorsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tbl_Buyer_AuctionTableAdapter
-            // 
-            this.tbl_Buyer_AuctionTableAdapter.ClearBeforeFill = true;
             // 
             // btnExport
             // 
@@ -74,39 +75,177 @@
             this.btnConvert.UseVisualStyleBackColor = true;
             this.btnConvert.Click += new System.EventHandler(this.btnConvert_Click);
             // 
-            // dataGridView1
+            // dgvExcelExport
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(776, 386);
-            this.dataGridView1.TabIndex = 3;
+            this.dgvExcelExport.AutoGenerateColumns = false;
+            this.dgvExcelExport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvExcelExport.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.parentidDataGridViewTextBoxColumn,
+            this.categoryenDataGridViewTextBoxColumn,
+            this.categoryarDataGridViewTextBoxColumn,
+            this.descriptionenDataGridViewTextBoxColumn,
+            this.descriptionarDataGridViewTextBoxColumn,
+            this.listbannerimgenDataGridViewTextBoxColumn,
+            this.listbannerimgarDataGridViewTextBoxColumn,
+            this.pagebannerimgenDataGridViewTextBoxColumn,
+            this.pagebannerimgarDataGridViewTextBoxColumn,
+            this.categoryurlenDataGridViewTextBoxColumn,
+            this.categoryurlarDataGridViewTextBoxColumn,
+            this.logofileDataGridViewTextBoxColumn,
+            this.categoryisenableDataGridViewTextBoxColumn,
+            this.issystemDataGridViewTextBoxColumn});
+            this.dgvExcelExport.DataSource = this.productCategoryBindingSource;
+            this.dgvExcelExport.Location = new System.Drawing.Point(12, 12);
+            this.dgvExcelExport.Name = "dgvExcelExport";
+            this.dgvExcelExport.Size = new System.Drawing.Size(776, 386);
+            this.dgvExcelExport.TabIndex = 3;
+            // 
+            // shahiraDBDataSet
+            // 
+            this.shahiraDBDataSet.DataSetName = "ShahiraDBDataSet";
+            this.shahiraDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // productCategoryBindingSource
+            // 
+            this.productCategoryBindingSource.DataMember = "Product_Category";
+            this.productCategoryBindingSource.DataSource = this.shahiraDBDataSet;
+            // 
+            // product_CategoryTableAdapter
+            // 
+            this.product_CategoryTableAdapter.ClearBeforeFill = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // parentidDataGridViewTextBoxColumn
+            // 
+            this.parentidDataGridViewTextBoxColumn.DataPropertyName = "parent_id";
+            this.parentidDataGridViewTextBoxColumn.HeaderText = "parent_id";
+            this.parentidDataGridViewTextBoxColumn.Name = "parentidDataGridViewTextBoxColumn";
+            // 
+            // categoryenDataGridViewTextBoxColumn
+            // 
+            this.categoryenDataGridViewTextBoxColumn.DataPropertyName = "category_en";
+            this.categoryenDataGridViewTextBoxColumn.HeaderText = "category_en";
+            this.categoryenDataGridViewTextBoxColumn.Name = "categoryenDataGridViewTextBoxColumn";
+            // 
+            // categoryarDataGridViewTextBoxColumn
+            // 
+            this.categoryarDataGridViewTextBoxColumn.DataPropertyName = "category_ar";
+            this.categoryarDataGridViewTextBoxColumn.HeaderText = "category_ar";
+            this.categoryarDataGridViewTextBoxColumn.Name = "categoryarDataGridViewTextBoxColumn";
+            // 
+            // descriptionenDataGridViewTextBoxColumn
+            // 
+            this.descriptionenDataGridViewTextBoxColumn.DataPropertyName = "description_en";
+            this.descriptionenDataGridViewTextBoxColumn.HeaderText = "description_en";
+            this.descriptionenDataGridViewTextBoxColumn.Name = "descriptionenDataGridViewTextBoxColumn";
+            // 
+            // descriptionarDataGridViewTextBoxColumn
+            // 
+            this.descriptionarDataGridViewTextBoxColumn.DataPropertyName = "description_ar";
+            this.descriptionarDataGridViewTextBoxColumn.HeaderText = "description_ar";
+            this.descriptionarDataGridViewTextBoxColumn.Name = "descriptionarDataGridViewTextBoxColumn";
+            // 
+            // listbannerimgenDataGridViewTextBoxColumn
+            // 
+            this.listbannerimgenDataGridViewTextBoxColumn.DataPropertyName = "list_banner_img_en";
+            this.listbannerimgenDataGridViewTextBoxColumn.HeaderText = "list_banner_img_en";
+            this.listbannerimgenDataGridViewTextBoxColumn.Name = "listbannerimgenDataGridViewTextBoxColumn";
+            // 
+            // listbannerimgarDataGridViewTextBoxColumn
+            // 
+            this.listbannerimgarDataGridViewTextBoxColumn.DataPropertyName = "list_banner_img_ar";
+            this.listbannerimgarDataGridViewTextBoxColumn.HeaderText = "list_banner_img_ar";
+            this.listbannerimgarDataGridViewTextBoxColumn.Name = "listbannerimgarDataGridViewTextBoxColumn";
+            // 
+            // pagebannerimgenDataGridViewTextBoxColumn
+            // 
+            this.pagebannerimgenDataGridViewTextBoxColumn.DataPropertyName = "page_banner_img_en";
+            this.pagebannerimgenDataGridViewTextBoxColumn.HeaderText = "page_banner_img_en";
+            this.pagebannerimgenDataGridViewTextBoxColumn.Name = "pagebannerimgenDataGridViewTextBoxColumn";
+            // 
+            // pagebannerimgarDataGridViewTextBoxColumn
+            // 
+            this.pagebannerimgarDataGridViewTextBoxColumn.DataPropertyName = "page_banner_img_ar";
+            this.pagebannerimgarDataGridViewTextBoxColumn.HeaderText = "page_banner_img_ar";
+            this.pagebannerimgarDataGridViewTextBoxColumn.Name = "pagebannerimgarDataGridViewTextBoxColumn";
+            // 
+            // categoryurlenDataGridViewTextBoxColumn
+            // 
+            this.categoryurlenDataGridViewTextBoxColumn.DataPropertyName = "categoryurl_en";
+            this.categoryurlenDataGridViewTextBoxColumn.HeaderText = "categoryurl_en";
+            this.categoryurlenDataGridViewTextBoxColumn.Name = "categoryurlenDataGridViewTextBoxColumn";
+            // 
+            // categoryurlarDataGridViewTextBoxColumn
+            // 
+            this.categoryurlarDataGridViewTextBoxColumn.DataPropertyName = "categoryurl_ar";
+            this.categoryurlarDataGridViewTextBoxColumn.HeaderText = "categoryurl_ar";
+            this.categoryurlarDataGridViewTextBoxColumn.Name = "categoryurlarDataGridViewTextBoxColumn";
+            // 
+            // logofileDataGridViewTextBoxColumn
+            // 
+            this.logofileDataGridViewTextBoxColumn.DataPropertyName = "logo_file";
+            this.logofileDataGridViewTextBoxColumn.HeaderText = "logo_file";
+            this.logofileDataGridViewTextBoxColumn.Name = "logofileDataGridViewTextBoxColumn";
+            // 
+            // categoryisenableDataGridViewTextBoxColumn
+            // 
+            this.categoryisenableDataGridViewTextBoxColumn.DataPropertyName = "category_is_enable";
+            this.categoryisenableDataGridViewTextBoxColumn.HeaderText = "category_is_enable";
+            this.categoryisenableDataGridViewTextBoxColumn.Name = "categoryisenableDataGridViewTextBoxColumn";
+            // 
+            // issystemDataGridViewTextBoxColumn
+            // 
+            this.issystemDataGridViewTextBoxColumn.DataPropertyName = "is_system";
+            this.issystemDataGridViewTextBoxColumn.HeaderText = "is_system";
+            this.issystemDataGridViewTextBoxColumn.Name = "issystemDataGridViewTextBoxColumn";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvExcelExport);
             this.Controls.Add(this.btnConvert);
             this.Controls.Add(this.btnExport);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.tblBuyerAuctionBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myfavouritemotorsDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExcelExport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shahiraDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productCategoryBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private myfavouritemotorsDataSet myfavouritemotorsDataSet;
-        private System.Windows.Forms.BindingSource tblBuyerAuctionBindingSource;
-        private myfavouritemotorsDataSetTableAdapters.tbl_Buyer_AuctionTableAdapter tbl_Buyer_AuctionTableAdapter;
+
         private System.Windows.Forms.Button btnExport;
         private System.Windows.Forms.Button btnConvert;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvExcelExport;
+        private ShahiraDBDataSet shahiraDBDataSet;
+        private System.Windows.Forms.BindingSource productCategoryBindingSource;
+        private ShahiraDBDataSetTableAdapters.Product_CategoryTableAdapter product_CategoryTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn parentidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoryenDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoryarDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionenDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionarDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn listbannerimgenDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn listbannerimgarDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pagebannerimgenDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pagebannerimgarDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoryurlenDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoryurlarDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn logofileDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoryisenableDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn issystemDataGridViewTextBoxColumn;
     }
 }
 
